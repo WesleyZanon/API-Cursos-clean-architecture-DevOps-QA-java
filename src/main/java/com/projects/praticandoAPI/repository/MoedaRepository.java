@@ -6,4 +6,5 @@ import com.projects.praticandoAPI.modelo.Moeda;
 
 public interface MoedaRepository extends JpaRepository<Moeda, Long>{
 	
+	Moeda findById(int id);
 }
