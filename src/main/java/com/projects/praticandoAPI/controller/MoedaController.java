@@ -12,18 +12,14 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.util.UriComponentsBuilder;
-
-import com.projects.praticandoAPI.controller.dto.CursoDto;
 import com.projects.praticandoAPI.controller.dto.MoedaDto;
-import com.projects.praticandoAPI.controller.dto.UsuarioDto;
-import com.projects.praticandoAPI.controller.form.CursoForm;
 import com.projects.praticandoAPI.controller.form.MoedaForm;
 import com.projects.praticandoAPI.modelo.Moeda;
 import com.projects.praticandoAPI.repository.MoedaRepository;
 
 @RestController
 @CrossOrigin
-@RequestMapping("/moedas")
+@RequestMapping("/moedas-transations")
 public class MoedaController {
 	
 	@Autowired
@@ -41,7 +37,7 @@ public class MoedaController {
 		Moeda moeda = form.converter(moedaRepository);
 		moedaRepository.save(moeda);
 		
-		URI uri = uriBuilder.path("/moedas/{id}").buildAndExpand(moeda.getId()).toUri();
+		URI uri = uriBuilder.path("/moedas-transations/{id}").buildAndExpand(moeda.getId()).toUri();
 		return ResponseEntity.created(uri).body(new MoedaDto(moeda));
 		
 	}

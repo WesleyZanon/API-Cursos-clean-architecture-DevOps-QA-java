@@ -9,4 +9,4 @@ INSERT INTO TOPICO(titulo, mensagem, data_criacao, status, autor_id, curso_id) V
 INSERT INTO TOPICO(titulo, mensagem, data_criacao, status, autor_id, curso_id) VALUES('Comentario 3', 'Entendi, mas podemos conversar?', '2019-05-05 20:00:00', 'NAO_RESPONDIDO', 1, 2);
 
 
-INSERT INTO MOEDA(valor) VALUES(200);
+INSERT INTO MOEDA(id_usuario,valor) VALUES(1,200);

@@ -6,6 +6,7 @@ import com.projects.praticandoAPI.repository.MoedaRepository;
 
 public class MoedaForm {
 	
+	private int idUsuario;
 	private double valor;
 
 	public double getValor() {
@@ -16,9 +17,18 @@ public class MoedaForm {
 		this.valor = valor;
 	}
 	
+	
+	public int getIdUsuario() {
+		return idUsuario;
+	}
+
+	public void setIdUsuario(int idUsuario) {
+		this.idUsuario = idUsuario;
+	}
+
 	public Moeda converter(MoedaRepository moedaRepository) {
 		
-		return new Moeda(valor);
+		return new Moeda(idUsuario, valor);
 	}
 
 }

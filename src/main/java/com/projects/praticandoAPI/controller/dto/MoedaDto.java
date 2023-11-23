@@ -5,21 +5,26 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import com.projects.praticandoAPI.modelo.Moeda;
-import com.projects.praticandoAPI.modelo.Usuario;
 
 public class MoedaDto {
 	
 	private Long id;
+	private int idUsuario;
 	private double valor;
 	
 	public MoedaDto(Moeda moeda) {
 		super();
 		this.id = moeda.getId();
+		this.idUsuario = moeda.getIdUsuario();
 		this.valor = moeda.getValor();
 	}
 
 	public Long getId() {
 		return id;
+	}
+
+	public int getIdUsuario() {
+		return idUsuario;
 	}
 
 	public double getValor() {

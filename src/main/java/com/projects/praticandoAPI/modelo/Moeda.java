@@ -10,13 +10,15 @@ public class Moeda {
 	
 	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
+	private int idUsuario;
 	private double valor;
 	
 	public Moeda() {
 	}
 
-	public Moeda(double valor) {
+	public Moeda(int idUsuario, double valor) {
 		super();
+		this.idUsuario = idUsuario;
 		this.valor = valor;
 	}
 	
@@ -61,6 +63,14 @@ public class Moeda {
 
 	public void setValor(double valor) {
 		this.valor = valor;
+	}
+
+	public int getIdUsuario() {
+		return idUsuario;
+	}
+
+	public void setIdUsuario(int idUsuario) {
+		this.idUsuario = idUsuario;
 	}
 	
 
