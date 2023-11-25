@@ -1,8 +1,10 @@
 spring:
   datasource:
     url: jdbc:postgresql://${DB_HOST:localhost}:${DB_PORT:5432}/${DB_NAME:papi}
-    username: ${DB_USER:postgres}
-    password: ${DB_PASSWORD:postgres}
+    username: zocwpnjzgmdngo
+    password: c5138b6729c2cd8e981f58b447e12919381e87e85b7313c4625bea53878f6a08
   jpa:
     hibernate:
       ddl-auto: validate
+      
+      

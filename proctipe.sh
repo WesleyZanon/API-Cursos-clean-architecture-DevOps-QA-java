@@ -1,6 +1,5 @@
 web:  java $JAVA_OPTS -Dserver.port=$PORT -Dspring.profiles.active=prod -jar target/*.war
 
-spring.jpa.properties.hibernate.jdbc.lob.non_contextual_creation=true
 spring.datasource.url-jdbc:postgresql:localhost:5432/blog-cursoscomp
 spring.datasource.username=postgres
 spring.datasource.password=adl123
